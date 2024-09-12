@@ -1,0 +1,69 @@
+.wrapper {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background: rgba(0,0,0,.6);
+}
+.form {
+    padding: 2rem;
+    background: white;
+    border-radius: var(--tui-radius-s);
+}
+.input-name-container, 
+.sub-adress-container {
+    display: flex;
+}
+.input-name-container div, 
+.sub-adress-container div,
+.sumbit-button {
+    width: 100%;
+}
+.close-button {
+    background: rgba(255,255,255,.7);
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
+    border-radius: 50%;
+    top: 2rem;
+    right: 2rem;
+    position: fixed;
+    transition: background .5s;
+}
+.close-button:hover {
+    background: rgba(255,255,255,.5);
+}
+
+.error-field-shake {
+    animation: shake 150ms 2 ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(3px, 0);
+    }
+
+    50% {
+        transform: translate(-3px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@media (max-width: 800px) {
+    .close-button {
+        filter: invert(1);
+    }
+    .wrapper {
+        justify-content: normal;
+    align-items: normal;
+    }
+    .form {
+        padding: 5rem 2rem 2rem 2rem;
+        border-radius: 0;
+        width: 100%;
+    }
+}

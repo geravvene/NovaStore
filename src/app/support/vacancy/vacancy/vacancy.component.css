@@ -1,0 +1,47 @@
+:host {
+    --tui-action-color: var(--tui-text-01);
+    --tui-action-background: var(--tui-base-04);
+}
+.main-container {
+    padding: 1.5rem 1rem;
+    border-radius: var(--tui-radius-s);
+    background: var(--tui-base-01);
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex button {
+    flex: auto;
+}
+.body-container {
+    border-radius: var(--tui-radius-s);
+    background: var(--tui-base-04);
+    padding: 3rem 1.5rem;
+}
+.grid-container {
+    display: grid;
+    gap: 2rem;
+}
+.similar-card:hover {
+    color: var(--tui-success-fill);
+}
+@media (max-width: 800px) {
+    .main-container {
+        margin: 0;
+        border-radius: 0;
+    }
+    .group {
+        display: block;
+    }
+    .group .primary {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .flex button {
+        flex: none;
+    }
+}
